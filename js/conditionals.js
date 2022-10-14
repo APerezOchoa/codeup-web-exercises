@@ -64,6 +64,7 @@ console.log(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
+//Walthrough note: You can write the cases as just case then return, no break is needed.
 switch(randomColor) {
     case "red":
         alert ("Roses are red.");
@@ -196,4 +197,3 @@ if(userYn){
     }
 }else{
 }
-
