@@ -71,8 +71,8 @@
         return array[2];
     }
 
-    console.log(firstElement(names));;
-    console.log(secondElement(names));;
-    console.log(thirdElement(names));;
+    console.log(firstElement(names));
+    console.log(secondElement(names));
+    console.log(thirdElement(names));
 
 })();
