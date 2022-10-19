@@ -15,7 +15,7 @@
 	let person = {
 		firsName: "Antonio",
 		lastName: "Perez Ochoa",
-		sayHello: function sayHello(){
+		sayHello: function(){
 			return "Hello " + person.firsName + " " + person.lastName + ". Hope you're having a great day!";
 		}
 	};
@@ -142,7 +142,7 @@
 	 */
 	let i = 1;
 	books.forEach(function (book){
-		console.log("Book # " + i);
+		console.log("Book # " + i); //could've done books.indexOf(book)+1
 		console.log("Title: " + book.title);
 		console.log("Author: " + book.author.firstName + " " + book.author.lastName);
 		console.log("---");
