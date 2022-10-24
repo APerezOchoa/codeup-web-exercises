@@ -1,43 +1,43 @@
 .fancy-header {
-    color: purple;
+    color: darkred;
+    text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: darkred;
     text-decoration: underline;
 }
 
-/*
-How can CSS transform rotate or change the size of a displayed element?
-
-To rotate and scale in CSS you use the following TRANSFORM properties:
-
-ROTATE(##DEG) property rotates something CW however many degrees/turns/radians
-you specify.
- -Negative numbers rotate CCW.
- -For example to rotate CCW a quarter turn, you can use either: scale(-90deg)
-  or scale(-0.25turn) or scale(-1.57rad).
-
-SCALE(X,Y) is in 2D in x and y directions.
- -If you only need one axis, you can say scaleX(2) or scaleY(0.5).
- -Use less than 1  to shrink and more than 1 to enlarge.
- -You use negative numbers to flip the image around on the specified axis like:
-  scale(-0.5, 1) will flip the image on the x-axis and shrink it to half its
-  original size, then the y value just keeps the original size.
-
- ********BEWARE*********
- If you rotate an image THEN try to move it over, it will maintain its x and
- y axis onto the new plane you rotated in. So it will probably end up somewhere
- you didn't want to. So do you placement first, then rotate.
-*/
-
-div {
-    width: 80px;
-    height: 80px;
-    background-color: skyblue;
+body {
+    background-color: slategray;
+    background-image: url("/img/background-image.jpeg");
+    background-size: 400px;
+    font-family: cursive;
 }
 
-.rotateExample {
-    transform: rotate(45deg);
-    background-color: greenyellow;
+table, th, td {
+    border: 1px solid;
+    background-color: lightsteelblue;
+    border-collapse: collapse;
+    text-align: center;
 }
-.scaleExample{
-    transform: scale(0.5,0.5);
-    background-color: greenyellow;
+
+th {
+    width: 150px;
+    text-decoration: underline;
 }
+
+ul {
+    list-style: circle inside;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+/* Links in different states*/
+a:link {color:red;} /*unvisited link*/
+a:visited {color:black;}
+a:hover {color:blue;}
+a:active {color:green;} /*while clicking on it*/
