@@ -12,7 +12,7 @@ h2 {
 body {
     background-color: slategray;
     background-image: url("/img/background-image.jpeg");
-    background-size: 400px;
+    background-size: 500px;
     font-family: cursive;
 }
 
@@ -24,7 +24,7 @@ table, th, td {
 }
 
 th {
-    width: 150px;
+    /*width: 150px;*/
     text-decoration: underline;
 }
 
