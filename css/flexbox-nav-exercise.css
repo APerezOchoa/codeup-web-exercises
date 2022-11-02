@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+nav{
+    background: darkgrey;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    padding: .5em;
+}
+
+a:hover{
+    color: blue;
+}
+
+.logo{
+    margin: auto;
+}
+
+.logo a {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 2.5em;
+    padding: .2em 0;
+
+}

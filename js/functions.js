@@ -14,7 +14,7 @@
         alert("Hello, " + name + "!");
     }
 
-    //in the walkthrough, I noticed I should've used console logs instead o
+    //in the walkthrough, I noticed I should've used console logs instead
     //of using alerts to make it more convenient and less pop up messages
 
     /**
