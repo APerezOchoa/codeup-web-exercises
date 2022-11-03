@@ -87,28 +87,36 @@ const hamsters = [
     }
 ];
 
-function getTallestHamster(arr){
-    let tallest = {heightInMM: 0};
+// function getTallestHamster(arr){
+//     let tallest = {heightInMM: 0};
+//
+//     // arr.forEach(function (hamster){
+//     //     if(hamster.heightInMM > tallest.heightInMM){
+//     //         tallest = hamster;
+//     //     }
+//     // });
+//     ////////////////////OR//////////////////////////////
+//     // for(let i = 0; i < arr.length; i++){
+//     //     if(arr[i].heightInMM > tallest.heightInMM){
+//     //         tallest = arr[i];
+//     //     }
+//     // }
+//     ////////////////////OR//////////////////////////////
+//     for(let hamster of arr){
+//         if(hamster.heightInMM > tallest.heightInMM){
+//             tallest = hamster;
+//         }
+//     }
+//     return tallest;
+// }
 
-    // arr.forEach(function (hamster){
-    //     if(hamster.heightInMM > tallest.heightInMM){
-    //         tallest = hamster;
-    //     }
-    // });
-    ////////////////////OR//////////////////////////////
-    // for(let i = 0; i < arr.length; i++){
-    //     if(arr[i].heightInMM > tallest.heightInMM){
-    //         tallest = arr[i];
-    //     }
-    // }
-    ////////////////////OR//////////////////////////////
+function getAverageHeight(arr){
+    let sumHeight = 0;
     for(let hamster of arr){
-        if(hamster.heightInMM > tallest.heightInMM){
-            tallest = hamster;
-        }
+        sumHeight += hamster.heightInMM;
     }
-    return tallest;
+    return sumHeight / arr.length;
 }
 
-console.log(getTallestHamster(hamsters));; // should return {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"};
+console.log("The average hamster height is " + getAverageHeight(hamsters) + " mm.");
 
