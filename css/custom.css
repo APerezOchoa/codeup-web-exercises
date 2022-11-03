@@ -1,27 +1,6 @@
-body {
-    margin: 0;
-}
-
 .jumbotron {
-    padding: 100px; /* fills out the jumbotron */
     background-image: url("../img/pizzaBackground.png");
     height: 346px;
-    background-size: cover;
-}
-
-.container {
-    width: 1170px; /* specify a width */
-    margin: 0 auto;  /* centers the container */
-    padding: 0 15px; /* adds some padding to the left and right*/
-}
-
-.jumbotron .container {
-    max-width: 100%;
-    background-color: whitesmoke;
-}
-
-.jumbotron h1 {
-    text-align: center;
-    color: black;
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
 }
