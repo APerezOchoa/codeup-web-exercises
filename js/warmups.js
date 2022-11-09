@@ -110,6 +110,7 @@ const hamsters = [
 //     return tallest;
 // }
 
+//////////////////Warmup #3///////////////////////////////////////
 function getAverageHeight(arr){
     let sumHeight = 0;
     for(let hamster of arr){
