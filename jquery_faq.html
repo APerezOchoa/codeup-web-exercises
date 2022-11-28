@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/jquery_faq.css">
+    <title>Title</title>
+</head>
+<body>
+    <p>Yosemite National Park FAQ's</p>
+
+    <h2 id="btn">Click to Show Answers</h2>
+
+    <dl>
+        <dt>How do I get to Yosemite?</dt>
+        <dd class="invisible">Keeping in mind that GPS units often provide incorrect driving directions in and around Yosemite, please take a look at our driving directions.</dd>
+
+        <dt>Can I drive my own vehicle into the park?</dt>
+        <dd class="invisible">You can drive your own vehicle into and around Yosemite. Shuttle buses are not mandatory, but are recommended (except in 2021, when they are not available).</dd>
+
+        <dt>When is the best time of year to visit Yosemite?/dt>
+        <dd class="invisible">It depends what you're looking for! While most people visit Yosemite during summer, there are advantages to visiting throughout the year.</dd>
+
+        <dt>Where can I see giant sequoias?</dt>
+        <dd class="invisible">There are three giant sequoia groves in Yosemite National Park: the Mariposa Grove, the Tuolumne Grove, and the Merced Grove.</dd>
+
+        <dt>Where and when can I see Horsetail Fall, the waterfall that resembles the Firefall?</dt>
+        <dd class="invisible">Horsetail Fall flows in winter and early spring, when snow is present on top of El Capitan. On sunny afternoons in mid- to late February, the setting sun can cause it to glow orange.</dd>
+
+        <dt>How can I protect bears from my food (and my food from bears)?</dt>
+        <dd class="invisible">Yosemite's bears are always searching for food and consider anything that looks or smells like food to be food. Learn more about how to properly store your food while visiting Yosemite.</dd>
+
+        <dt>How can I protect myself from bears?</dt>
+        <dd class="invisible">Black bears in Yosemite tend to avoid people and can be scared off. Proper food storage helps protect you, your property, and bears. Learn what to do if you see a bear.</dd>
+
+        <dt>Can I bring my pet to Yosemite?</dt>
+        <dd class="invisible">Pets are allowed in Yosemite though there are regulations one must follow.</dd>
+
+        <dt>Is Internet access available in Yosemite?</dt>
+        <dd class="invisible">Yes, Internet access is available in some locations.</dd>
+
+        <dt>Will my cell phone work in Yosemite?</dt>
+        <dd class="invisible">Cell service is available with some carriers in some areas, but is limited.</dd>
+    </dl>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('#btn').click(function(e) {
+            e.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+
+    </script>
+</body>
+</html>

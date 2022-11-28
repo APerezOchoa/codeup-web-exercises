@@ -1,0 +1,22 @@
+p, dt {
+    font-weight: bold;
+}
+p {
+    font-size: 2rem;
+}
+dl, dd {
+    font-size: 1rem;
+}
+
+dd {
+    margin: 1em;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+h2 {
+    color: blue;
+    text-decoration: underline;
+}
