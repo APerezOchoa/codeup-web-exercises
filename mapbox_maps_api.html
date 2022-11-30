@@ -18,34 +18,58 @@
 </head>
 <body>
 
-<h1>My First Mapbox Map!</h1>
+    <h1>My First Mapbox Map!</h1>
 
-<!-- The HTML element that serves as the Mapbox container -->
-<div id='map'></div>
+    <!-- The HTML element that serves as the Mapbox container -->
+    <div id='map'></div>
 
-<!-- Mapbox JS -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <!-- Mapbox JS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-<!-- Mapbox Geocoder Util Methods -->
-<script src="mapbox-geocoder-utils.js"></script>
+    <!-- Mapbox Geocoder Util Methods -->
+    <script src="js/mapbox-geocoder-utils.js"></script>
 
-<!-- Custom JS -->
-<script>
-    mapboxgl.accessToken = mapBoxKey;
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
-    });
+    <!-- Custom JS -->
+    <script>
+        mapboxgl.accessToken = mapBoxKey;
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 10,
+            center: [-98.4916, 29.4252]
+        });
 
-    // the  geocode method from mapbox-geocoder-utils.js
-    geocode("600 Navarro St #350, San Antonio, TX 78205", mapBoxKey).then(function(result) {
-        console.log(result);
-        map.setCenter(result);
-        map.setZoom(15);
-    });
+        //the geocode method from mapbox-geocoder-utils.js
+        geocode("San Diego, CA", mapBoxKey).then(function(result) {
+            console.log(result);
+            map.setCenter(result);
+            map.setZoom(11);
+        });
 
-</script>
+        let places = [
+            {
+                location: [-117.17955, 32.68234],
+                name: "Yummy Sushi!"
+            },
+            {
+                location: [-117.16945, 32.71111],
+                name: "Cheesecake Factory!"
+            },
+            {
+                location: [-117.15945, 32.71253],
+                name: "Fogo de Chao Brazilian Steakhouse!"
+            }
+        ];
+
+        places.forEach(function (place){
+            let marker = new mapboxgl.Marker()
+                .setLngLat(place.location)
+                .addTo(map);
+            let popup = new mapboxgl.Popup()
+                .setHTML(place.name)
+            marker.setPopup(popup)
+        });
+
+    </script>
 </body>
 </html>
