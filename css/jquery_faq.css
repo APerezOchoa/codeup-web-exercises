@@ -21,6 +21,19 @@ h2 {
     text-decoration: underline;
 }
 
+h4 {
+    color: blue;
+    text-decoration: underline;
+}
+
 .highlight {
     background: yellow;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.blue{
+    color: blue;
 }

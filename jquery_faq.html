@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/jquery_faq.css">
-    <title>Title</title>
+    <title>jQuery Essential Methods</title>
 </head>
 <body>
     <p>Yosemite National Park FAQ's</p>
@@ -42,6 +42,50 @@
         <dd class="invisible">Cell service is available with some carriers in some areas, but is limited.</dd>
     </dl>
 
+    <button id="button-yellow">Yellow Background</button>
+
+    <h3 id="carlsbad-heading">Carlsbad Caverns National Park</h3>
+    <ul id="carlsbad-facts">
+        <li>Carlsbad Cavern is one of over 300 limestone caves in a fossil reef laid down by an inland sea about 265 million years ago. <br>
+            Twelve-to-fourteen thousand years ago, American Indians lived in the Guadalupe Mountains. Some of their cooking ring sites<br>
+            and pictographs have been found within the present day boundaries of the park.</li>
+        <li>The park's cultural resources represent a long and varied continuum of human use starting in prehistoric times and illustrating<br>
+            many adaptations to the Chihuahuan Desert environment. Human activities, including prehistoric and historic American Indian<br>
+            occupations, European exploration and settlement, industrial exploitation, commercial and cavern accessibility development and<br>
+            tourism have left reminders of their presence, and have contributed to the rich and diverse history of the area.</li>
+        <li>Location and terrain: Southeastern New Mexico; Guadalupe Mountains (primarily limestone) and Permian Basin (primarily gypsum). <br>
+            Size: 46,766 acres (18,925 hectares), including over 33,000 acres (13,354 hectares) designated wilderness.</li>
+        <li class="" id="last">Surface ecosystems: Chihuahuan Desert, with Pinyon-Juniper in higher elevations and shrub/grass lands in lower. Which is home to<br>
+            750 plants species, 67 species of mammals, 17 bat species, 357 bird species and 54 amphibian and reptile species.</li>
+    </ul>
+    <h3 id="white-heading">White Sands National Park</h3>
+    <ul id="white-facts">
+        <li>On July 16, 1945, one week after the establishment of White Sands Missile Range (WSMR), the world’s first atomic bomb was <br>
+            detonated in the north-central portion of the missile range, approximately 60 miles north of White Sands National Monument.</li>
+        <li>At 5:30 a.m. on July 16, the nuclear device, known as “Gadget,” was successfully detonated. A multi-colored cloud surged <br>
+            38,000 feet into the air within seven minutes. Where the tower had been was a crater one-half mile across and eight feet deep.<br>
+            Sand in the crater was fused by the intense heat into a glass-like solid, the color of green jade.</li>
+        <li>Although no information on the test was released until after the atomic bomb had been used as a weapon, the flash of light and <br>
+            shock wave made a vivid impression over an area with a radius of at least 160 miles.</li>
+        <li class="" id="last2">Also located by the park, White Sands Missile Range (WSMR) has had a historic past and an impressive mission for today’s security. The <br>
+            U.S. military established a permanent presence in the Tularosa Basin during World War II, creating White Sands Proving Grounds, now <br>
+            called White Sands Missile Range, as well as the Alamogordo Bombing and Gunnery Range, known today as Holloman Air Force Base.</li>
+    </ul>
+    <h3 id="guadalupe-heading">Guadalupe Mountains National Park</h3>
+    <ul id="guadalupe-facts">
+        <li>Guadalupe Mountains National Park preserves one of the finest examples of an ancient, marine fossil reef on Earth. During the Permian period, <br>
+            about 265 million years ago, a vast tropical sea covered much of the region. Within this sea, calcareous sponges, algae, and other lime-secreting <br>
+            marine organisms, along with lime precipitated from the seawater, built up and formed a reef that paralleled the shoreline for 400 miles.   </li>
+        <li>After this sea evaporated, the reef was buried in thick blankets of sediment and mineral salts, and was entombed for millions of years until uplift<br>
+            exposed massive portions of it. Today, geologists and scientists come from around the world to study this phenomenal example of a fossilized reef.</li>
+        <li>The biological diversity within Guadalupe Mountains National Park is outstanding and includes more than 1000 species of plants. While many of <br>
+            these are common desert species such as ocotillo and prickly pear cactus, others are found only in the park and nowhere else in the world.</li>
+        <li class="" id="last3">Guadalupe Mountains rise sharply from the surrounding desert floor to form an island of outstanding diversity. Several different ecosystems, or <br>
+            life zones, are found within the park. These include the harsh Chihuahuan desert community, lush streamside woodlands of oaks and maples, rocky<br>
+            canyons, and mountaintop forests of ponderosa pine and Douglas fir. Together, these ecosystems provide habitat for 60 species of mammals, 289 <br>
+            species of birds, and 55 species of reptiles.</li>
+    </ul>
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script>
@@ -53,6 +97,26 @@
 
         $( "dt" ).click(function() {
             $( this ).toggleClass( "highlight" );
+        });
+
+        $('#button-yellow').click(function(e) {
+            $('#last').toggleClass("highlight")
+            $('#last2').toggleClass("highlight")
+            $('#last3').toggleClass("highlight")
+        });
+
+        $( "h3" ).click(function() {
+            $(this).next().children().toggleClass("bold");
+        });
+
+        $( "#carlsbad-facts" ).click(function() {
+            $("#carlsbad-facts").children().first().toggleClass("blue");
+        });
+        $( "#white-facts" ).click(function() {
+            $("#white-facts").children().first().toggleClass("blue");
+        });
+        $( "#guadalupe-facts" ).click(function() {
+            $("#guadalupe-facts").children().first().toggleClass("blue");
         });
 
     </script>
