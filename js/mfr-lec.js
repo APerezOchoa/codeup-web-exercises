@@ -32,7 +32,7 @@ const hamsters = [
     }
 ];
 
-// .map() will change every element in the arraya nd return an array of same length
+// .map() will change every element in the array and return an array of same length
 
 // const names = [];
 // for (let hamster of hamsters){
